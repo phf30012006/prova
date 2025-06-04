@@ -1,0 +1,898 @@
+{
+	"info": {
+		"_postman_id": "13de85e3-e7d7-48a8-9639-4db42342924d",
+		"name": "Laravel API - Biblioteca",
+		"description": "Coleção de rotas da API Laravel para gerenciamento de livros, autores, gêneros, usuários e reviews.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34706067"
+	},
+	"item": [
+		{
+			"name": "Listar todos os livros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/livros",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"livros"
+					]
+				},
+				"description": "Listar todos os livros"
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhes de um livro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/livros/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"livros",
+						"1"
+					]
+				},
+				"description": "Detalhes de um livro"
+			},
+			"response": []
+		},
+		{
+			"name": "Criar um novo livro",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Nome de outro novo livro\",\r\n  \"sinopse\": \"Descrição do outro livro\",\r\n  \"autor_id\": 2,\r\n  \"genero_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/livros",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"livros"
+					]
+				},
+				"description": "Criar um novo livro"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar um livro",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sinopse\": \"Sinopse atualizada uma vez\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/livros/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"livros",
+						"1"
+					]
+				},
+				"description": "Atualizar um livro"
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir um livro",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/livros/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"livros",
+						"3"
+					]
+				},
+				"description": "Excluir um livro"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar livros com autor, gênero e reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/livros/completo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"livros",
+						"completo"
+					]
+				},
+				"description": "Listar livros com autor, gênero e reviews"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar reviews de um livro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/livros/1/reviews",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"livros",
+						"1",
+						"reviews"
+					]
+				},
+				"description": "Listar reviews de um livro"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos os autores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/autores",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"autores"
+					]
+				},
+				"description": "Listar todos os autores"
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhes de um autor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/autores/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"autores",
+						"1"
+					]
+				},
+				"description": "Detalhes de um autor"
+			},
+			"response": []
+		},
+		{
+			"name": "Criar um novo autor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Bruno Carvalho\",\r\n  \"data_nascimento\": \"2006-04-12\",\r\n  \"biografia\": \"Biografia do autor Bruno\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/autores",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"autores"
+					]
+				},
+				"description": "Criar um novo autor"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar um autor",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Paulo Henrique Fusco\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/autores/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"autores",
+						"1"
+					]
+				},
+				"description": "Atualizar um autor"
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir um autor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/autores/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"autores",
+						"2"
+					]
+				},
+				"description": "Excluir um autor"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar livros por autor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/autores/1/livros",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"autores",
+						"1",
+						"livros"
+					]
+				},
+				"description": "Listar livros por autor"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar autores com seus livros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/autores/com-livros",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"autores",
+						"com-livros"
+					]
+				},
+				"description": "Listar autores com seus livros"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos os gêneros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/generos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"generos"
+					]
+				},
+				"description": "Listar todos os gêneros"
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhes de um gênero",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/generos/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"generos",
+						"1"
+					]
+				},
+				"description": "Detalhes de um gênero"
+			},
+			"response": []
+		},
+		{
+			"name": "Criar um novo gênero",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Terror\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/generos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"generos"
+					]
+				},
+				"description": "Criar um novo gênero"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar um gênero",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Romance\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/generos/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"generos",
+						"2"
+					]
+				},
+				"description": "Atualizar um gênero"
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir um gênero",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/generos/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"generos",
+						"3"
+					]
+				},
+				"description": "Excluir um gênero"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar gêneros com seus livros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/generos/com-livros",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"generos",
+						"com-livros"
+					]
+				},
+				"description": "Listar gêneros com seus livros"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar livros por gênero",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/generos/1/livros",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"generos",
+						"1",
+						"livros"
+					]
+				},
+				"description": "Listar livros por gênero"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos os usuários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/usuarios",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"usuarios"
+					]
+				},
+				"description": "Listar todos os usuários"
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhes de um usuário",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/usuarios/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"usuarios",
+						"1"
+					]
+				},
+				"description": "Detalhes de um usuário"
+			},
+			"response": []
+		},
+		{
+			"name": "Criar um novo usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Guilherme\",\r\n  \"email\": \"gui@email.com\",\r\n  \"senha\": \"gui123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/usuarios",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"usuarios"
+					]
+				},
+				"description": "Criar um novo usuário"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar um usuário",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"senha\": \"andre1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/usuarios/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"usuarios",
+						"1"
+					]
+				},
+				"description": "Atualizar um usuário"
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir um usuário",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/usuarios/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"usuarios",
+						"3"
+					]
+				},
+				"description": "Excluir um usuário"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar reviews por usuário",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/usuarios/2/reviews",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"usuarios",
+						"2",
+						"reviews"
+					]
+				},
+				"description": "Listar reviews por usuário"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos os reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reviews",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reviews"
+					]
+				},
+				"description": "Listar todos os reviews"
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhes de um review",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reviews/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reviews",
+						"1"
+					]
+				},
+				"description": "Detalhes de um review"
+			},
+			"response": []
+		},
+		{
+			"name": "Criar um novo review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nota\": 4,\r\n  \"texto\": \"Livro bom\",\r\n  \"usuario_id\": 2,\r\n  \"livro_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reviews",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reviews"
+					]
+				},
+				"description": "Criar um novo review"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar um review",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"texto\": \"Livro muito bom\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reviews/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reviews",
+						"3"
+					]
+				},
+				"description": "Atualizar um review"
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir um review",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reviews/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reviews",
+						"2"
+					]
+				},
+				"description": "Excluir um review"
+			},
+			"response": []
+		}
+	]
+}
