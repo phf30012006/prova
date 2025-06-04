@@ -13,7 +13,7 @@ class LivroRepository
 
     public function details(int $id)
     {
-        return Livro::find($id);
+        return Livro::findOrFail($id);
     }
 
     public function store(array $data)

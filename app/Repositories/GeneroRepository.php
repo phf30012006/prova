@@ -13,7 +13,7 @@ class GeneroRepository
 
     public function details(int $id)
     {
-        return Genero::find($id);
+        return Genero::findOrFail($id);
     }
 
     public function store(array $data)

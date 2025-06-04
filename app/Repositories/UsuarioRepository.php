@@ -13,7 +13,7 @@ class UsuarioRepository
 
     public function details(int $id)
     {
-        return Usuario::find($id);
+        return Usuario::findOrFail($id);
     }
 
     public function store(array $data)

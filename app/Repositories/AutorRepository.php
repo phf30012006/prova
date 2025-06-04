@@ -13,7 +13,7 @@ class AutorRepository
 
     public function details(int $id)
     {
-        return Autor::find($id);
+        return Autor::findOrFail($id);
     }
 
     public function store(array $data)

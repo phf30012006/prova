@@ -13,7 +13,7 @@ class ReviewRepository
 
     public function details(int $id)
     {
-        return Review::find($id);
+        return Review::findOrFail($id);
     }
 
     public function store(array $data)
